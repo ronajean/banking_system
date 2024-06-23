@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking System</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="bank">THE BANK</p>
+            <ul>               
+                <li><a href="index.php">Home</a></li>
+                <li><a href="customers.php">All Users</a></li>
+                <li><a href="transfer.php">Transfer Money</a></li>
+                <li><a href="transactions.php">Transaction History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<h1>
+    Welcome to the Banking System
+</h1>
+
+<div id = "desc">
+    <p >
+        This is a simple banking system that allows you to view all users, transfer money between users, and view transaction history.
+    </p>
+    <p>
+        To get started, click on one of the buttons below.
+    </p>
+</div>
+
+<div id="button-container" style="text-align: center; margin-top: 50px;">
+    <p><button class="button-style" onclick="location.href='view_users.php'">View Users</button></p>
+    <p><button class="button-style" onclick="location.href='transfer_money.php'">Transfer Money</button></p>
+    <p><button class="button-style" onclick="location.href='transaction_history.php'">Transaction History</button></p>
+</div>
+
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> All Rights Reserved</p>
+</footer>
+</body>
+</html>
