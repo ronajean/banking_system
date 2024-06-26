@@ -6,6 +6,13 @@ $sql = "SELECT * FROM customers";
 $customers = $conn->query($sql);
 ?>
 
+<style>
+    *{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+</style>
+
 <h1>Transfer Money</h1>
 <form action="transfer_action.php" method="POST">
     <table id="customers-view">

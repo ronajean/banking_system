@@ -7,7 +7,7 @@ $amount = $_POST['amount'];
 
 $conn->autocommit(FALSE);
 
-$sender_sql = "SELECT current_balance FROM customers WHERE id = $sender_id";
+$sender_sql = "SELECT current_balance, name FROM customers WHERE id = $sender_id";
 $sender_result = $conn->query($sender_sql);
 $sender = $sender_result->fetch_assoc();
 
@@ -26,9 +26,9 @@ if ($sender['current_balance'] >= $amount) {
         $receiver_name = $receiver['name'];
 
         // Display success message as a pop-up
-        "<script>
-            alert('Successfully transferred $amount from $sender_name to $receiver_name!');
-            window.location.href = 'index.php'; // Redirect to the homepage or any other page
+        echo "<script>
+            alert('Successfully transferred Php $amount from $sender_name to $receiver_name!');
+            window.location.href = 'customers-view.php'; // Redirect to the desired page after clicking OK
         </script>";
     } else {
         $conn->rollback();
@@ -36,19 +36,16 @@ if ($sender['current_balance'] >= $amount) {
         // Display failure message as a pop-up
         echo "<script>
             alert('Transfer failed!');
-            window.location.href = 'index.php'; // Redirect to the homepage or any other page
+            window.location.href = 'customers-view.php'; // Redirect to the desired page after clicking OK
         </script>";
     }
 } else {
     // Display insufficient balance message as a pop-up
     echo "<script>
         alert('Insufficient balance!');
-        window.location.href = 'index.php'; // Redirect to the homepage or any other page
+        window.location.href = 'customers-view.php'; // Redirect to the desired page after clicking OK
     </script>";
 }
 
 $conn->autocommit(TRUE);
-
-header("Location: customers-view.php");
 ?>
-

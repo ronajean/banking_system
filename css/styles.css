@@ -1,29 +1,30 @@
 html, body {
     height: 100%; /* Ensure both html and body cover the full height of the viewport */
     min-height: 100vh; /* Use viewport height as a minimum to cover the full viewport */
+    
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*background-image: url('../assets/bg1.jpg');
+    background-image: url('../assets/bg.jpg');
     background-size: cover;
-    background-position: 99% 95%;
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Fix the background image so it doesn’t scroll with the content */
+    background-position: 99% 60%;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     position: relative;
 }
 
 body::before {
-    content: ""; /* Required for the pseudo-element to show */
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white overlay */
-    z-index: 0; /* Ensures the overlay is behind the content */
+    background: rgba(255, 255, 255, 0.6); 
+    z-index: 0; 
 }
 
 * {
@@ -33,11 +34,12 @@ body::before {
 
 
 header {
-    background: linear-gradient(to bottom, #8e8b96, transparent); /* Add a gradient background */
+    background: linear-gradient(to bottom, #8e8b96, transparent); 
     color: #333;
     padding: 0;
     position: relative;
     z-index: 1;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #bank-icon {
@@ -49,15 +51,15 @@ header {
 }
 
 nav {
-    display: flex; /* Use Flexbox */
-    align-items: center; /* Align items vertically in the center */
-    justify-content: space-between; /* Space between "THE BANK" and the navigation links */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
     padding: 0;
 
 }
 
 nav p#bank {
-    margin-right: auto; /* Pushes all other elements to the right */
+    margin-right: auto; 
     margin-left: 20px;
     font-size: 20px;
 }
@@ -95,6 +97,7 @@ footer {
 h1 {
     text-align: center;
     margin-top: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #desc{
@@ -109,9 +112,9 @@ h1 {
 }
 
 .button-style {
-    width: 400px; /* Set the width */
-    height: 50px; /* Set the height */
-    font-size: 16px; /* Optional: Adjust font size for better appearance */
+    width: 400px; 
+    height: 50px; 
+    font-size: 16px; 
     background-color: rgba(0,0,0,0.1);
     border: none;
     border-radius: 10px;
@@ -127,86 +130,86 @@ button:hover {
 
 
 #customers-view {
-    width: 50%; /* Optional: Makes the table use the full width of its container */
+    width: 50%; 
     margin: 0 auto;   
-    border-collapse: separate; /* This is required for border-spacing to work */
+    border-collapse: separate; 
     border-spacing: 0 2px;
-    border-radius: 10px; /* Adjust as needed for the desired curvature */
-    overflow: hidden; /* Ensures the content does not overflow the rounded corners */
+    border-radius: 10px; 
+    overflow: hidden; 
 }
 
 #customers-view, #customers-view th, #customers-view td {
-    border: none; /* Adds a solid black border */
+    border: none;
 }
 
 #customers-view th, #customers-view td {
-    padding: 8px; /* Adds some padding inside the cells */
-    text-align: center; /* Aligns text to the left; adjust as needed */
+    padding: 8px; 
+    text-align: center; 
     
 }
 
 #customers-view th {
-    background-color: #805dd1; /* Dark grey background for the header row */
-    color: white; /* White text color for the header row */
+    background-color: #805dd1; 
+    color: white; 
 
 }
 
 #customers-view th:first-child, #customers-view td:first-child {
-    border-top-left-radius: 10px; /* Curves the top-left corner of the first cell */
-    border-bottom-left-radius: 10px; /* Curves the bottom-left corner of the first cell */
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px; 
 }
 
 #customers-view th:last-child, #customers-view td:last-child {
-    border-top-right-radius: 10px; /* Curves the top-right corner of the last cell */
-    border-bottom-right-radius: 10px; /* Curves the bottom-right corner of the last cell */
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
 }
 /* Alternate row background colors */
 #customers-view tr:nth-child(odd) {
-    background-color: rgba(116, 174, 207, 0.555); /* Light grey for odd rows */
+    background-color: rgba(116, 174, 207, 0.555); 
 }
 
 #customers-view tr:nth-child(even) {
-    background-color: rgba(221, 221, 221, 0.534); /* Slightly darker grey for even rows */
+    background-color: rgba(221, 221, 221, 0.534); 
 }
 
 #customers-view tr:hover {
-    background-color: #b6a6da; /* Change to your preferred hover color */
+    background-color: #b6a6da; 
 }
 
 .dropdown_name {
-    width: 60%; /* Adjusted width for a broader dropdown */
+    width: 60%; 
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
-    background-color: #f8f8f8; /* Light grey background */
-    font-family: Arial, sans-serif; /* Cleaner font */
-    font-size: 16px; /* Slightly larger text */
-    color: #333; /* Darker text for better readability */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for interactions */
+    background-color: #f8f8f8; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: #333; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: border-color 0.3s, box-shadow 0.3s; 
 }
 
 .dropdown_name:focus {
-    border-color: #007bff; /* Highlight color when focused */
-    box-shadow: 0 0 8px rgba(0,123,255,0.2); /* Stronger shadow for focus */
+    border-color: #007bff; 
+    box-shadow: 0 0 8px rgba(0,123,255,0.2); 
 }
 
 
 
 .button-container {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 10vh; /* Adjust this height as needed */
+    justify-content: center; 
+    align-items: center; 
+    height: 10vh; 
 }
 
 #transfer_button {
-    width: 100px; /* Set the width */
-    height: 50px; /* Set the height */
-    font-size: 16px; /* Optional: Adjust font size for better appearance */
+    width: 100px; 
+    height: 50px; 
+    font-size: 16px; 
     background-color: rgba(0,0,0,0.1);
     border: none;
     border-radius: 10px;

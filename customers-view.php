@@ -6,6 +6,13 @@ $sql = "SELECT * FROM customers";
 $result = $conn->query($sql);
 ?>
 
+<style>
+    *{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+</style>
+
 <h1>All Customers</h1>
 <table id="customers-view">
     <thead>

@@ -23,6 +23,12 @@ $transactions_result = $conn->query("
 
 ?>
 
+<style>
+    * {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+</style>
 
     <h1>Transaction History</h1>
 

@@ -1,10 +1,17 @@
 <?php include 'views/header.php'; ?>
 
-<h1>
-    Welcome to the Banking System
+<style>
+    *{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+</style>
+
+<h1 >
+    Welcome to the RJBC Banking System!
 </h1>
 
-<div id = "desc">
+<div id = "desc" >
     <p >
         This is a simple banking system that allows you to view all users, transfer money between users, and view transaction history.
     </p>

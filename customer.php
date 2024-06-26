@@ -31,6 +31,13 @@ $transactions_sql = "
 $transactions_result = $conn->query($transactions_sql);
 ?>
 
+<style>
+    *{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    
+</style>
+
 <h1><?= $customer['name'] ?></h1>
 <table id="customers-view">
     <thead>
