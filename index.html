@@ -6,17 +6,18 @@
     <title>Document</title>
     <script>
         // Add this to your HTML file
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     fetch('index.php')
-        //         .then(response => response.text())
-        //         .then(data => {
-        //             document.getElementById('php-content').innerHTML = data;
-        //         })
-        //         .catch(error => console.error('Error loading PHP content:', error));
-        // });
+        // Add this to your HTML file
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('index.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('php-content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading PHP content:', error));
+        });
     </script>
 </head>
 <body>
-    <iframe src="index.php" width="100%" height="500px"></iframe>
+    <div id="php-content">Loading PHP content...</div>
 </body>
 </html>
